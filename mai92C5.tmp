@@ -1,0 +1,197 @@
+[gd_scene load_steps=30 format=3 uid="uid://c8dm0p5hnwoc3"]
+
+[ext_resource type="Theme" uid="uid://dq3nkyvt0p0ak" path="res://Assets/main_theme.tres" id="1_4g8ax"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="2_j7whi"]
+[ext_resource type="Script" path="res://Scripts/Letter.gd" id="3_l6agy"]
+[ext_resource type="PackedScene" uid="uid://cg8pqtjxwyrvb" path="res://tile.tscn" id="4_yimjp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fnnxu"]
+bg_color = Color(0.205117, 0.205117, 0.205117, 1)
+
+[sub_resource type="Resource" id="Resource_k11e0"]
+script = ExtResource("3_l6agy")
+Lower = "α"
+Upper = "Α"
+Vowel = true
+
+[sub_resource type="Resource" id="Resource_myoff"]
+script = ExtResource("3_l6agy")
+Lower = "β"
+Upper = "Β"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_oh5f4"]
+script = ExtResource("3_l6agy")
+Lower = "γ"
+Upper = "Γ"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_ptt7x"]
+script = ExtResource("3_l6agy")
+Lower = "δ"
+Upper = "Δ"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_ttqu5"]
+script = ExtResource("3_l6agy")
+Lower = "ε"
+Upper = "Ε"
+Vowel = true
+
+[sub_resource type="Resource" id="Resource_ibkec"]
+script = ExtResource("3_l6agy")
+Lower = "ζ"
+Upper = "Ζ"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_4hemv"]
+script = ExtResource("3_l6agy")
+Lower = "η"
+Upper = "Η"
+Vowel = true
+
+[sub_resource type="Resource" id="Resource_754ki"]
+script = ExtResource("3_l6agy")
+Lower = "θ"
+Upper = "Θ"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_8anjv"]
+script = ExtResource("3_l6agy")
+Lower = "ι"
+Upper = "Ι"
+Vowel = true
+
+[sub_resource type="Resource" id="Resource_fhcsk"]
+script = ExtResource("3_l6agy")
+Lower = "κ"
+Upper = "Κ"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_5cfk6"]
+script = ExtResource("3_l6agy")
+Lower = "λ"
+Upper = "Λ"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_ffmf6"]
+script = ExtResource("3_l6agy")
+Lower = "μ"
+Upper = "Μ"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_wm672"]
+script = ExtResource("3_l6agy")
+Lower = "ν"
+Upper = "Ν"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_vb27o"]
+script = ExtResource("3_l6agy")
+Lower = "ο"
+Upper = "Ο"
+Vowel = true
+
+[sub_resource type="Resource" id="Resource_3d2xu"]
+script = ExtResource("3_l6agy")
+Lower = "π"
+Upper = "Π"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_5gn0u"]
+script = ExtResource("3_l6agy")
+Lower = "ρ"
+Upper = "Ρ"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_x8466"]
+script = ExtResource("3_l6agy")
+Lower = "σ"
+Upper = "Σ"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_5aq57"]
+script = ExtResource("3_l6agy")
+Lower = "τ"
+Upper = "Τ"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_m1n36"]
+script = ExtResource("3_l6agy")
+Lower = "υ"
+Upper = "Υ"
+Vowel = true
+
+[sub_resource type="Resource" id="Resource_v1vfm"]
+script = ExtResource("3_l6agy")
+Lower = "φ"
+Upper = "Φ"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_m0ugq"]
+script = ExtResource("3_l6agy")
+Lower = "χ"
+Upper = "Χ"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_mcj1f"]
+script = ExtResource("3_l6agy")
+Lower = "ψ"
+Upper = "Ψ"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_4bgu2"]
+script = ExtResource("3_l6agy")
+Lower = "ω"
+Upper = "Ω"
+Vowel = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mdyg2"]
+bg_color = Color(0.103744, 0.103744, 0.103744, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Main" type="PanelContainer" node_paths=PackedStringArray("LowerGrid", "UpperLines")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_4g8ax")
+theme_override_styles/panel = SubResource("StyleBoxFlat_fnnxu")
+script = ExtResource("2_j7whi")
+Characters = Array[ExtResource("3_l6agy")]([SubResource("Resource_k11e0"), SubResource("Resource_myoff"), SubResource("Resource_oh5f4"), SubResource("Resource_ptt7x"), SubResource("Resource_ttqu5"), SubResource("Resource_ibkec"), SubResource("Resource_4hemv"), SubResource("Resource_754ki"), SubResource("Resource_8anjv"), SubResource("Resource_fhcsk"), SubResource("Resource_5cfk6"), SubResource("Resource_ffmf6"), SubResource("Resource_wm672"), SubResource("Resource_vb27o"), SubResource("Resource_3d2xu"), SubResource("Resource_5gn0u"), SubResource("Resource_x8466"), SubResource("Resource_5aq57"), SubResource("Resource_m1n36"), SubResource("Resource_v1vfm"), SubResource("Resource_m0ugq"), SubResource("Resource_mcj1f"), SubResource("Resource_4bgu2")])
+LowerGrid = NodePath("Container/LG Panel (Container)/LG Margin/Lower Grid")
+UpperLines = NodePath("Container/UL Margin/Upper Lines")
+TileRef = ExtResource("4_yimjp")
+
+[node name="Container" type="VBoxContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="UL Margin" type="MarginContainer" parent="Container"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Upper Lines" type="Control" parent="Container/UL Margin"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="LG Panel (Container)" type="PanelContainer" parent="Container"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mdyg2")
+
+[node name="LG Margin" type="MarginContainer" parent="Container/LG Panel (Container)"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Lower Grid" type="Control" parent="Container/LG Panel (Container)/LG Margin"]
+layout_mode = 2
+mouse_filter = 2
