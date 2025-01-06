@@ -24,12 +24,12 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      inkscape:zoom="8.6778906"
-     inkscape:cx="7.0293581"
-     inkscape:cy="38.89194"
-     inkscape:window-width="1920"
-     inkscape:window-height="1057"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:cx="17.515777"
+     inkscape:cy="29.557874"
+     inkscape:window-width="1536"
+     inkscape:window-height="841"
+     inkscape:window-x="1912"
+     inkscape:window-y="305"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -39,22 +39,18 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#d1d1d1;stroke:none;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1"
+       style="fill:#f4f4f4;stroke-width:0.473062;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1"
        id="rect1"
        width="16.933332"
        height="19.049999"
        x="0"
-       y="-1.110223e-16"
-       rx="4.2333331"
-       ry="4.2333331" />
+       y="0" />
     <rect
-       style="fill:#bababa;fill-opacity:1;stroke:none;stroke-width:0.248369;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:#e2a7a7;fill-opacity:1;stroke-width:0.43117;stroke-linecap:round;stroke-linejoin:round"
        id="rect2"
-       width="15.805226"
-       height="17.984863"
-       x="1.1281064"
-       y="1.0651363"
-       rx="3.9513066"
-       ry="3.9966359" />
+       width="15.345833"
+       height="17.4625"
+       x="0.79374999"
+       y="0.79374999" />
   </g>
 </svg>

@@ -1,34 +1,31 @@
-[gd_scene load_steps=6 format=3 uid="uid://cg8pqtjxwyrvb"]
+[gd_scene load_steps=5 format=3 uid="uid://cg8pqtjxwyrvb"]
 
 [ext_resource type="Texture2D" uid="uid://d35u1qquu8spt" path="res://Assets/Letter Card.svg" id="1_q472g"]
 [ext_resource type="Script" path="res://Scripts/tile.gd" id="1_qwdbh"]
-[ext_resource type="Texture2D" uid="uid://nfkwbywkx01p" path="res://Assets/Letter Card Selected.svg" id="3_cimny"]
-[ext_resource type="Texture2D" uid="uid://cfvxtdex1ja6y" path="res://Assets/Letter Card Pressed.svg" id="4_urqxl"]
+
+[sub_resource type="SystemFont" id="SystemFont_qlm3v"]
+font_names = PackedStringArray("Bell MT")
 
 [sub_resource type="LabelSettings" id="LabelSettings_kf051"]
-font_size = 32
+font = SubResource("SystemFont_qlm3v")
+font_size = 48
 font_color = Color(0.212305, 0.212305, 0.212305, 1)
 
 [node name="Node2D" type="Sprite2D" node_paths=PackedStringArray("text")]
 z_index = 1
 texture = ExtResource("1_q472g")
 script = ExtResource("1_qwdbh")
-Normal = ExtResource("1_q472g")
-Selected = ExtResource("3_cimny")
-Pressed = ExtResource("4_urqxl")
 text = NodePath("Label")
 
 [node name="Label" type="Label" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -32.0
-offset_top = -36.0
-offset_right = -32.0
-offset_bottom = -36.0
+offset_left = -42.0
+offset_top = -23.0
+offset_right = 42.0
+offset_bottom = 22.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "NULL"
+size_flags_horizontal = 4
+text = "ΝΥΛΛ"
 label_settings = SubResource("LabelSettings_kf051")
 horizontal_alignment = 1
 vertical_alignment = 1

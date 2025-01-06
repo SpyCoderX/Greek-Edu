@@ -6,6 +6,7 @@ extends PanelContainer
 @export var TileRef : PackedScene
 
 var Text : Array[Tile]
+var Letters : Array[Tile]
 
 const Spacing : Vector2 = Vector2(10,10)
 
@@ -15,44 +16,85 @@ func _ready() -> void:
 
 func setup() -> void:
 	for c in Characters:
-		addNewTile(c)
+		addGeneratorTile(c)
+		
 
 func deleteTile(tile:Tile):
-	tile.queue_free()
+	tile.delete()
 	Text.erase(tile)
 	positionTextTiles()
 
 func addNewTile(c:Letter):
-	
 	var tile : Tile = TileRef.instantiate()
-	tile.Character = c
-	tile.position = offsetFromID(Characters.find(c))
+	Letters.append(tile)
+	prepTile(tile,c)
 	LowerGrid.add_child(tile)
 	tile.movedToDeleteArea.connect(deleteTile.bind(tile))
 	tile.movedToTextArea.connect(addTile.bind(tile))
+	tile.mouseMoved.connect(addTile.bind(tile))
+	tile.activatePressedEvent()
+	addTile(tile)
+
+func addGeneratorTile(c):
+	var tile : Tile = TileRef.instantiate()
+	tile.isTileGenerator = true
+	Letters.append(tile)
+	prepTile(tile,c)
+	LowerGrid.add_child(tile)
 	tile.pickedUpFromSpawn.connect(addNewTile.bind(c))
+
+func prepTile(tile,c):
+	tile.Character = c
+	tile.target_position = offsetFromID(Characters.find(c))
+	tile.position = offsetFromID(Characters.find(c))
 	tile.lowerArea = LowerGrid
-	return tile
+
 
 func addTile(tile:Tile):
+	Letters.erase(tile)
 	Text.erase(tile) # If it is being moved around then remove it from the list first.
+	var diff : Vector2 = tile.target_position-tile.position
 	tile.reparent(UpperLines)
-	var id : int
-	if tile.position.x>Text.size()*Tile.SIZE.x || tile.position.y>Tile.SIZE.y*2.5:
-		id = Text.size()
-	else:
-		id = floor(tile.position.x/Tile.SIZE.x+0.5)
+	tile.target_position = tile.position+diff
+	var id : int = len(Text)
+	var offset : Vector2 = Vector2()
+	for x in range(len(Text)):
+		offset.x += Text[x].Character.SIZE.x
+		if offset.x>UpperLines.size.x:
+			offset.x = 0
+			offset.y += Text[x].Character.SIZE.y
+		if tile.Character.SIZE.y+offset.y>tile.target_position.y && offset.x>tile.target_position.x:
+			id = x
+			break
+		
 	Text.insert(id,tile)
 	positionTextTiles()
+func sumTextWidth():
+	var width : float = 0
+	for tile in Text:
+		width += tile.Character.SIZE.x
+	return width
 func positionTextTiles():
 	var id : int = 0
 	for letter in Text:
-		letter.position = offsetInTextByID(id)
+		letter.target_position = offsetInTextByID(id)
 		id += 1
 
 func offsetFromID(id):
-	var tilesPerRow : int = ceili(LowerGrid.size.x/(Tile.SIZE.x+Spacing.x)-0.5)
-	return Tile.SIZE/2+Vector2((Tile.SIZE.x+Spacing.x)*(id%tilesPerRow),(Tile.SIZE.y+Spacing.y)*floor(id/tilesPerRow))
+	var offset : Vector2 = Letters[id].Character.SIZE/2
+	for x in range(len(Letters)):
+		if x>=id: break
+		offset.x += Letters[x].Character.SIZE.x + Spacing.x
+		if offset.x>LowerGrid.size.x:
+			offset.x = Letters[id].Character.SIZE.x/2
+			offset.y += Letters[id].Character.SIZE.y + Spacing.y
+	return offset
 func offsetInTextByID(id):
-	var tilesPerRow : int = ceili(UpperLines.size.x/(Tile.SIZE.x)-0.5)
-	return Tile.SIZE/2+Vector2((Tile.SIZE.x)*(id%tilesPerRow),(Tile.SIZE.y)*floor(id/tilesPerRow))
+	var offset : Vector2 = Text[id].Character.SIZE/2
+	for x in range(len(Text)):
+		if x>=id: break
+		offset.x += Text[x].Character.SIZE.x
+		if offset.x>UpperLines.size.x:
+			offset.x = Text[id].Character.SIZE.x/2
+			offset.y += Text[id].Character.SIZE.y
+	return offset

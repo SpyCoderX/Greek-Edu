@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="2.1694726"
-     inkscape:cx="6.9141227"
-     inkscape:cy="61.535692"
+     inkscape:zoom="8.6778906"
+     inkscape:cx="17.515777"
+     inkscape:cy="29.442639"
      inkscape:window-width="1920"
      inkscape:window-height="1057"
      inkscape:window-x="-8"
@@ -39,22 +39,18 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#c9d9d9;stroke:none;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1"
+       style="fill:#f2dbdb;stroke-width:0.473062;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1"
        id="rect1"
        width="16.933332"
        height="19.049999"
        x="0"
-       y="-1.110223e-16"
-       rx="4.2333331"
-       ry="4.2333331" />
+       y="0" />
     <rect
-       style="fill:#afc5c5;fill-opacity:1;stroke:none;stroke-width:0.248369;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:#e3aaaa;fill-opacity:1;stroke-width:0.43117;stroke-linecap:round;stroke-linejoin:round"
        id="rect2"
-       width="15.805226"
-       height="17.984863"
-       x="1.1281064"
-       y="1.0651363"
-       rx="3.9513066"
-       ry="3.9966359" />
+       width="15.345833"
+       height="17.4625"
+       x="0.79374999"
+       y="0.79374999" />
   </g>
 </svg>

@@ -1,9 +1,11 @@
-[gd_scene load_steps=30 format=3 uid="uid://c8dm0p5hnwoc3"]
+[gd_scene load_steps=34 format=3 uid="uid://c8dm0p5hnwoc3"]
 
 [ext_resource type="Theme" uid="uid://dq3nkyvt0p0ak" path="res://Assets/main_theme.tres" id="1_4g8ax"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="2_j7whi"]
 [ext_resource type="Script" path="res://Scripts/Letter.gd" id="3_l6agy"]
+[ext_resource type="Script" path="res://Scripts/Diphthong.gd" id="4_ly1yb"]
 [ext_resource type="PackedScene" uid="uid://cg8pqtjxwyrvb" path="res://tile.tscn" id="4_yimjp"]
+[ext_resource type="Script" path="res://Scripts/Space.gd" id="5_ify1m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fnnxu"]
 bg_color = Color(0.205117, 0.205117, 0.205117, 1)
@@ -146,6 +148,18 @@ Lower = "ω"
 Upper = "Ω"
 Vowel = true
 
+[sub_resource type="Resource" id="Resource_xyvuf"]
+script = ExtResource("4_ly1yb")
+Lower = "αο"
+Upper = "Αο"
+Vowel = false
+
+[sub_resource type="Resource" id="Resource_ad2ln"]
+script = ExtResource("5_ify1m")
+Lower = ""
+Upper = ""
+Vowel = false
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mdyg2"]
 bg_color = Color(0.103744, 0.103744, 0.103744, 1)
 corner_radius_top_left = 16
@@ -163,7 +177,7 @@ mouse_filter = 2
 theme = ExtResource("1_4g8ax")
 theme_override_styles/panel = SubResource("StyleBoxFlat_fnnxu")
 script = ExtResource("2_j7whi")
-Characters = Array[ExtResource("3_l6agy")]([SubResource("Resource_k11e0"), SubResource("Resource_myoff"), SubResource("Resource_oh5f4"), SubResource("Resource_ptt7x"), SubResource("Resource_ttqu5"), SubResource("Resource_ibkec"), SubResource("Resource_4hemv"), SubResource("Resource_754ki"), SubResource("Resource_8anjv"), SubResource("Resource_fhcsk"), SubResource("Resource_5cfk6"), SubResource("Resource_ffmf6"), SubResource("Resource_wm672"), SubResource("Resource_vb27o"), SubResource("Resource_3d2xu"), SubResource("Resource_5gn0u"), SubResource("Resource_x8466"), SubResource("Resource_5aq57"), SubResource("Resource_m1n36"), SubResource("Resource_v1vfm"), SubResource("Resource_m0ugq"), SubResource("Resource_mcj1f"), SubResource("Resource_4bgu2")])
+Characters = Array[ExtResource("3_l6agy")]([SubResource("Resource_k11e0"), SubResource("Resource_myoff"), SubResource("Resource_oh5f4"), SubResource("Resource_ptt7x"), SubResource("Resource_ttqu5"), SubResource("Resource_ibkec"), SubResource("Resource_4hemv"), SubResource("Resource_754ki"), SubResource("Resource_8anjv"), SubResource("Resource_fhcsk"), SubResource("Resource_5cfk6"), SubResource("Resource_ffmf6"), SubResource("Resource_wm672"), SubResource("Resource_vb27o"), SubResource("Resource_3d2xu"), SubResource("Resource_5gn0u"), SubResource("Resource_x8466"), SubResource("Resource_5aq57"), SubResource("Resource_m1n36"), SubResource("Resource_v1vfm"), SubResource("Resource_m0ugq"), SubResource("Resource_mcj1f"), SubResource("Resource_4bgu2"), SubResource("Resource_xyvuf"), SubResource("Resource_ad2ln")])
 LowerGrid = NodePath("Container/LG Panel (Container)/LG Margin/Lower Grid")
 UpperLines = NodePath("Container/UL Margin/Upper Lines")
 TileRef = ExtResource("4_yimjp")

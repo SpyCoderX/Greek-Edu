@@ -1,12 +1,8 @@
 extends Sprite2D
 class_name Tile
 
-static var SIZE : Vector2 = Vector2(64,72)
 
-@export var Normal : Texture
-@export var Selected : Texture
-@export var Pressed : Texture
-
+@export var Offset : Vector2 = Vector2(0,-64)
 
 var isPressed : bool = false
 var contactPoint : Vector2
@@ -18,43 +14,79 @@ var Character : Letter:
 		if text!=null:
 			text.text = Character.Lower
 
+var target_position : Vector2
+var deleted : bool = false
+var isTileGenerator : bool = false
 func _ready() -> void:
-	scale = SIZE/get_rect().size
-	texture = Normal
+	updateVisuals()
 
 func _process(delta: float) -> void:
+	if deleted: return
+	if isTileGenerator: return
 	if isPressed:
-		position = get_global_mouse_position()-contactPoint-(global_position-position)
+		target_position = get_global_mouse_position()-contactPoint-(global_position-position)+Offset
+	position = (position+target_position)/2.0
 
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
+	if deleted: return
 	if event is InputEventMouseButton:
 		if isMouseOnThis() && event.pressed:
-			isPressed = true
-			contactPoint = get_global_mouse_position()-global_position
-			texture = Pressed
-			if global_position.y>lowerArea.global_position.y:
-				pickedUpFromSpawn.emit()
+			activatePressedEvent()
 		elif isPressed:
-				position = get_global_mouse_position()-contactPoint-(global_position-position)
-				texture = Selected if isMouseOnThis() else Normal
-				isPressed = false
-				if global_position.y<lowerArea.global_position.y:
-					movedToTextArea.emit()
-				else:
-					movedToDeleteArea.emit()
+			if !isTileGenerator:
+				target_position = get_global_mouse_position()-contactPoint-(global_position-position)+Offset
+			updateVisuals()
+			isPressed = false
+			if target_position.y + (global_position.y-position.y)<lowerArea.global_position.y:
+				movedToTextArea.emit()
+			else:
+				movedToDeleteArea.emit()
 	
 	if event is InputEventMouseMotion:
+		if isPressed:
+			mouseMoved.emit()
 		if isMouseOnThis() && !isPressed:
-			texture = Selected
-		elif !isPressed && texture==Selected:
-			texture = Normal
+			updateVisuals()
+		elif !isPressed && texture==Character.Selected_Texture:
+			updateVisuals()
 			
 func isMouseOnThis() -> bool:
 	return get_rect().has_point(get_global_mouse_position()-global_position)
+
+func updateVisuals():
+	texture = Character.Normal_Texture
+	scale = Character.SIZE/get_rect().size
+	z_index = 1
+	if isPressed:
+		z_index = 2
+	elif isMouseOnThis() && !isPressed:
+		texture = Character.Selected_Texture
+		scale*=1.1
+	$Label.set_anchors_preset(Control.PRESET_CENTER)
+
+func delete():
+	deleted = true
+	var tween = get_tree().create_tween()
+	tween.set_ease(Tween.EASE_IN)
+	tween.set_trans(Tween.TRANS_QUAD)
+	tween.tween_property(self,"position",Vector2(position.x,6000),2)
+	await tween.finished
+	queue_free()
+
+func activatePressedEvent():
+	isPressed = true
+	contactPoint = get_global_mouse_position()-global_position
+	updateVisuals()
+	if target_position.y + (global_position.y-position.y)>lowerArea.global_position.y:
+		pickedUpFromSpawn.emit()
+	else:
+		pickedUpFromText.emit()
 
 
 
 signal movedToTextArea
 signal movedToDeleteArea
 signal pickedUpFromSpawn
+signal pickedUpFromText
+signal mouseMoved
