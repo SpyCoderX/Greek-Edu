@@ -8,6 +8,8 @@ extends PanelContainer
 var Text : Array[Tile]
 var Letters : Array[Tile]
 
+const SentenceEnding : String = ".!;"
+
 const Spacing : Vector2 = Vector2(10,10)
 
 # Called when the node enters the scene tree for the first time.
@@ -17,7 +19,6 @@ func _ready() -> void:
 func setup() -> void:
 	for c in Characters:
 		addGeneratorTile(c)
-		
 
 func deleteTile(tile:Tile):
 	tile.delete()
@@ -49,6 +50,11 @@ func prepTile(tile,c):
 	tile.position = offsetFromID(Characters.find(c))
 	tile.lowerArea = LowerGrid
 
+func regenerateGeneratorPositions():
+	for tile in Letters:
+		if !tile.isTileGenerator: continue
+		tile.target_position = offsetFromID(Characters.find(tile.Character))
+		tile.position = offsetFromID(Characters.find(tile.Character))
 
 func addTile(tile:Tile):
 	Letters.erase(tile)
@@ -78,17 +84,18 @@ func positionTextTiles():
 	var id : int = 0
 	for letter in Text:
 		letter.target_position = offsetInTextByID(id)
+		letter.isUpper = true if id==0 or SentenceEnding.contains(Text[id-1].Character.Lower) else false
 		id += 1
 
 func offsetFromID(id):
-	var offset : Vector2 = Letters[id].Character.SIZE/2
+	var offset : Vector2 = Vector2()
 	for x in range(len(Letters)):
 		if x>=id: break
 		offset.x += Letters[x].Character.SIZE.x + Spacing.x
-		if offset.x>LowerGrid.size.x:
-			offset.x = Letters[id].Character.SIZE.x/2
+		if offset.x+Letters[x+1].Character.SIZE.x>LowerGrid.size.x:
+			offset.x = 0
 			offset.y += Letters[id].Character.SIZE.y + Spacing.y
-	return offset
+	return offset+Letters[id].Character.SIZE/2
 func offsetInTextByID(id):
 	var offset : Vector2 = Text[id].Character.SIZE/2
 	for x in range(len(Text)):
@@ -98,3 +105,7 @@ func offsetInTextByID(id):
 			offset.x = Text[id].Character.SIZE.x/2
 			offset.y += Text[id].Character.SIZE.y
 	return offset
+
+
+func _on_resized() -> void:
+	regenerateGeneratorPositions()

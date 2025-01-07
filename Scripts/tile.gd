@@ -12,21 +12,31 @@ var Character : Letter:
 	set(new_letter):
 		Character = new_letter
 		if text!=null:
-			text.text = Character.Lower
+			updateText()
 
 var target_position : Vector2
+var target_scale : Vector2
 var deleted : bool = false
 var isTileGenerator : bool = false
+var isUpper : bool = false:
+	set(new_upper):
+		isUpper = new_upper
+		if text!=null:
+			updateText()
 func _ready() -> void:
 	updateVisuals()
 
 func _process(delta: float) -> void:
 	if deleted: return
+	scale = (scale+target_scale)/2.0
 	if isTileGenerator: return
 	if isPressed:
 		target_position = get_global_mouse_position()-contactPoint-(global_position-position)+Offset
 	position = (position+target_position)/2.0
 
+func updateText():
+	text.text = Character.Upper if isUpper else Character.Lower
+	
 
 func _input(event: InputEvent) -> void:
 	if deleted: return
@@ -56,14 +66,15 @@ func isMouseOnThis() -> bool:
 
 func updateVisuals():
 	texture = Character.Normal_Texture
-	scale = Character.SIZE/get_rect().size
+	target_scale = Character.SIZE/get_rect().size
 	z_index = 1
-	if isPressed:
+	if isPressed && !isTileGenerator:
 		z_index = 2
 	elif isMouseOnThis() && !isPressed:
 		texture = Character.Selected_Texture
-		scale*=1.1
+		target_scale *= 1.1
 	$Label.set_anchors_preset(Control.PRESET_CENTER)
+	
 
 func delete():
 	deleted = true
@@ -73,7 +84,6 @@ func delete():
 	tween.tween_property(self,"position",Vector2(position.x,6000),2)
 	await tween.finished
 	queue_free()
-
 func activatePressedEvent():
 	isPressed = true
 	contactPoint = get_global_mouse_position()-global_position
@@ -82,6 +92,8 @@ func activatePressedEvent():
 		pickedUpFromSpawn.emit()
 	else:
 		pickedUpFromText.emit()
+	if isTileGenerator:
+		scale = Vector2()
 
 
 
