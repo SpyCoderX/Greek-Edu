@@ -24,6 +24,7 @@ var Text : Array[Tile]
 var Letters : Array[Tile]
 
 const SentenceEnding : String = ".!;"
+const WordEnding : String = SentenceEnding+" "
 
 var speaking : bool = false:
 	set(new_speaking):
@@ -106,7 +107,8 @@ func positionTextTiles():
 	var id : int = 0
 	for letter in Text:
 		letter.target_position = offsetInTextByID(id)
-		letter.isUpper = true if id==0 or SentenceEnding.contains(Text[id-1].Character.Lower) else false
+		letter.isUpper = id==0 or SentenceEnding.contains(Text[id-1].Character.Lower)
+		letter.isAtEnd = id==Text.size()-1 or WordEnding.contains(Text[id+1].Character.Lower)
 		id += 1
 
 func offsetFromID(id):

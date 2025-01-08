@@ -23,6 +23,11 @@ var isUpper : bool = false:
 		isUpper = new_upper
 		if text!=null:
 			updateText()
+var isAtEnd : bool = false:
+	set(new_end):
+		isAtEnd = new_end
+		if text!=null:
+			updateText()
 func _ready() -> void:
 	updateVisuals()
 
@@ -35,7 +40,7 @@ func _process(delta: float) -> void:
 	position = (position+target_position)/2.0
 
 func updateText():
-	text.text = Character.Upper if isUpper else Character.Lower
+	text.text = Character.Upper if isUpper else (Character.EndingLetter if isAtEnd else Character.Lower)
 	
 
 func _input(event: InputEvent) -> void:

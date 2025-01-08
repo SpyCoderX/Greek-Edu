@@ -53,6 +53,7 @@ bg_color = Color(0.205117, 0.205117, 0.205117, 1)
 script = ExtResource("3_l6agy")
 Lower = "α"
 Upper = "Α"
+EndingLetter = ""
 Vowel = true
 Sound = ExtResource("4_vtbh5")
 
@@ -60,6 +61,7 @@ Sound = ExtResource("4_vtbh5")
 script = ExtResource("3_l6agy")
 Lower = "β"
 Upper = "Β"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("5_2fsh6")
 
@@ -67,6 +69,7 @@ Sound = ExtResource("5_2fsh6")
 script = ExtResource("3_l6agy")
 Lower = "γ"
 Upper = "Γ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("6_0fyq6")
 
@@ -74,6 +77,7 @@ Sound = ExtResource("6_0fyq6")
 script = ExtResource("3_l6agy")
 Lower = "δ"
 Upper = "Δ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("7_o8r3v")
 
@@ -81,6 +85,7 @@ Sound = ExtResource("7_o8r3v")
 script = ExtResource("3_l6agy")
 Lower = "ε"
 Upper = "Ε"
+EndingLetter = ""
 Vowel = true
 Sound = ExtResource("8_68isc")
 
@@ -88,6 +93,7 @@ Sound = ExtResource("8_68isc")
 script = ExtResource("3_l6agy")
 Lower = "ζ"
 Upper = "Ζ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("9_vx618")
 
@@ -95,6 +101,7 @@ Sound = ExtResource("9_vx618")
 script = ExtResource("3_l6agy")
 Lower = "η"
 Upper = "Η"
+EndingLetter = ""
 Vowel = true
 Sound = ExtResource("10_f8ftc")
 
@@ -102,6 +109,7 @@ Sound = ExtResource("10_f8ftc")
 script = ExtResource("3_l6agy")
 Lower = "θ"
 Upper = "Θ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("11_s8w8w")
 
@@ -109,6 +117,7 @@ Sound = ExtResource("11_s8w8w")
 script = ExtResource("3_l6agy")
 Lower = "ι"
 Upper = "Ι"
+EndingLetter = ""
 Vowel = true
 Sound = ExtResource("12_tw2nn")
 
@@ -116,6 +125,7 @@ Sound = ExtResource("12_tw2nn")
 script = ExtResource("3_l6agy")
 Lower = "κ"
 Upper = "Κ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("13_i50he")
 
@@ -123,6 +133,7 @@ Sound = ExtResource("13_i50he")
 script = ExtResource("3_l6agy")
 Lower = "λ"
 Upper = "Λ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("14_rxd6x")
 
@@ -130,6 +141,7 @@ Sound = ExtResource("14_rxd6x")
 script = ExtResource("3_l6agy")
 Lower = "μ"
 Upper = "Μ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("15_noj32")
 
@@ -137,6 +149,7 @@ Sound = ExtResource("15_noj32")
 script = ExtResource("3_l6agy")
 Lower = "ν"
 Upper = "Ν"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("16_gs4j4")
 
@@ -144,6 +157,7 @@ Sound = ExtResource("16_gs4j4")
 script = ExtResource("3_l6agy")
 Lower = "ξ"
 Upper = "Ξ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("17_52kkk")
 
@@ -151,6 +165,7 @@ Sound = ExtResource("17_52kkk")
 script = ExtResource("3_l6agy")
 Lower = "ο"
 Upper = "Ο"
+EndingLetter = ""
 Vowel = true
 Sound = ExtResource("18_o321p")
 
@@ -158,6 +173,7 @@ Sound = ExtResource("18_o321p")
 script = ExtResource("3_l6agy")
 Lower = "π"
 Upper = "Π"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("19_mvcnk")
 
@@ -165,6 +181,7 @@ Sound = ExtResource("19_mvcnk")
 script = ExtResource("3_l6agy")
 Lower = "ρ"
 Upper = "Ρ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("20_1qxvc")
 
@@ -172,6 +189,7 @@ Sound = ExtResource("20_1qxvc")
 script = ExtResource("3_l6agy")
 Lower = "σ"
 Upper = "Σ"
+EndingLetter = "ς"
 Vowel = false
 Sound = ExtResource("21_bf2bf")
 
@@ -179,6 +197,7 @@ Sound = ExtResource("21_bf2bf")
 script = ExtResource("3_l6agy")
 Lower = "τ"
 Upper = "Τ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("22_70nuo")
 
@@ -186,6 +205,7 @@ Sound = ExtResource("22_70nuo")
 script = ExtResource("3_l6agy")
 Lower = "υ"
 Upper = "Υ"
+EndingLetter = ""
 Vowel = true
 Sound = ExtResource("23_r2775")
 
@@ -193,6 +213,7 @@ Sound = ExtResource("23_r2775")
 script = ExtResource("3_l6agy")
 Lower = "φ"
 Upper = "Φ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("24_e6ysi")
 
@@ -200,6 +221,7 @@ Sound = ExtResource("24_e6ysi")
 script = ExtResource("3_l6agy")
 Lower = "χ"
 Upper = "Χ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("25_cfrot")
 
@@ -207,6 +229,7 @@ Sound = ExtResource("25_cfrot")
 script = ExtResource("3_l6agy")
 Lower = "ψ"
 Upper = "Ψ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("26_qg1gn")
 
@@ -214,6 +237,7 @@ Sound = ExtResource("26_qg1gn")
 script = ExtResource("3_l6agy")
 Lower = "ω"
 Upper = "Ω"
+EndingLetter = ""
 Vowel = true
 Sound = ExtResource("27_13dkr")
 
@@ -221,30 +245,35 @@ Sound = ExtResource("27_13dkr")
 script = ExtResource("5_ify1m")
 Lower = ";"
 Upper = ";"
+EndingLetter = ""
 Vowel = false
 
 [sub_resource type="Resource" id="Resource_ad2ln"]
 script = ExtResource("5_ify1m")
-Lower = ""
-Upper = ""
+Lower = " "
+Upper = " "
+EndingLetter = ""
 Vowel = false
 
 [sub_resource type="Resource" id="Resource_pwlx7"]
 script = ExtResource("5_ify1m")
 Lower = "!"
 Upper = "!"
+EndingLetter = ""
 Vowel = false
 
 [sub_resource type="Resource" id="Resource_gqs4n"]
 script = ExtResource("5_ify1m")
 Lower = "."
 Upper = "."
+EndingLetter = ""
 Vowel = false
 
 [sub_resource type="Resource" id="Resource_vt0p3"]
 script = ExtResource("4_ly1yb")
 Lower = "αι"
 Upper = "Αι"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("29_1liqr")
 
@@ -252,6 +281,7 @@ Sound = ExtResource("29_1liqr")
 script = ExtResource("4_ly1yb")
 Lower = "αυ"
 Upper = "Αυ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("31_qr51o")
 
@@ -259,6 +289,7 @@ Sound = ExtResource("31_qr51o")
 script = ExtResource("4_ly1yb")
 Lower = "ει"
 Upper = "Ει"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("32_oun2w")
 
@@ -266,6 +297,7 @@ Sound = ExtResource("32_oun2w")
 script = ExtResource("4_ly1yb")
 Lower = "οι"
 Upper = "Οι"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("32_oun2w")
 
@@ -273,6 +305,7 @@ Sound = ExtResource("32_oun2w")
 script = ExtResource("4_ly1yb")
 Lower = "υι"
 Upper = "Υι"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("32_oun2w")
 
@@ -280,6 +313,7 @@ Sound = ExtResource("32_oun2w")
 script = ExtResource("4_ly1yb")
 Lower = "ευ"
 Upper = "Ευ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("33_alsyx")
 
@@ -287,6 +321,7 @@ Sound = ExtResource("33_alsyx")
 script = ExtResource("4_ly1yb")
 Lower = "ηυ"
 Upper = "Ηυ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("34_ojn4q")
 
@@ -294,6 +329,7 @@ Sound = ExtResource("34_ojn4q")
 script = ExtResource("4_ly1yb")
 Lower = "ου"
 Upper = "Ου"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("35_o0qgg")
 
@@ -301,6 +337,7 @@ Sound = ExtResource("35_o0qgg")
 script = ExtResource("4_ly1yb")
 Lower = "μπ"
 Upper = "Μπ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("36_cahus")
 
@@ -308,6 +345,7 @@ Sound = ExtResource("36_cahus")
 script = ExtResource("4_ly1yb")
 Lower = "ντ"
 Upper = "Ντ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("37_l0wv6")
 
@@ -315,6 +353,7 @@ Sound = ExtResource("37_l0wv6")
 script = ExtResource("4_ly1yb")
 Lower = "γγ"
 Upper = "Γγ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("38_q5ijl")
 
@@ -322,6 +361,7 @@ Sound = ExtResource("38_q5ijl")
 script = ExtResource("4_ly1yb")
 Lower = "γκ"
 Upper = "Γκ"
+EndingLetter = ""
 Vowel = false
 Sound = ExtResource("38_q5ijl")
 
