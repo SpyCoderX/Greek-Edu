@@ -94,6 +94,10 @@ func activatePressedEvent():
 		pickedUpFromText.emit()
 	if isTileGenerator:
 		scale = Vector2()
+	else:
+		if Character.Sound!=null:
+			$AudioPlayer.stream = Character.Sound
+			$AudioPlayer.play()
 
 
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhnqraakhw5v2"
+path="res://.godot/imported/αι.mp3-f52184aa3d1d6eb95ff6db5702162adb.mp3str"
+
+[deps]
+
+source_file="res://Assets/Greek Audio/αι.mp3"
+dest_files=["res://.godot/imported/αι.mp3-f52184aa3d1d6eb95ff6db5702162adb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

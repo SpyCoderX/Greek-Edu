@@ -5,6 +5,7 @@
 
 [sub_resource type="SystemFont" id="SystemFont_qlm3v"]
 font_names = PackedStringArray("Bell MT")
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_kf051"]
 font = SubResource("SystemFont_qlm3v")
@@ -29,3 +30,5 @@ text = "ΝΥΛΛ"
 label_settings = SubResource("LabelSettings_kf051")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioPlayer" type="AudioStreamPlayer" parent="."]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cggwtqje3jhwe"
+path="res://.godot/imported/θ.mp3-c4794f404fb834104bd663d6cab08c0a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Greek Audio/θ.mp3"
+dest_files=["res://.godot/imported/θ.mp3-c4794f404fb834104bd663d6cab08c0a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

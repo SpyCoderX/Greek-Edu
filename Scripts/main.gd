@@ -5,10 +5,31 @@ extends PanelContainer
 @export var UpperLines : Control
 @export var TileRef : PackedScene
 
+@export var PlayButton : Button
+@export var StopButton : Button
+
+
+@export var Speaker : AudioStreamPlayer
+
+@export_group("Button Textures")
+@export var NormalPlay : Texture
+@export var DisabledPlay : Texture
+@export var PressedPlay : Texture
+
+@export var NormalStop : Texture
+@export var DisabledStop : Texture
+@export var PressedStop : Texture
+
 var Text : Array[Tile]
 var Letters : Array[Tile]
 
 const SentenceEnding : String = ".!;"
+
+var speaking : bool = false:
+	set(new_speaking):
+		speaking = new_speaking
+		if PlayButton!=null and StopButton!=null:
+			updateButtonTextures()
 
 const Spacing : Vector2 = Vector2(10,10)
 
@@ -26,6 +47,7 @@ func deleteTile(tile:Tile):
 	positionTextTiles()
 
 func addNewTile(c:Letter):
+	speaking = false
 	var tile : Tile = TileRef.instantiate()
 	Letters.append(tile)
 	prepTile(tile,c)
@@ -109,3 +131,41 @@ func offsetInTextByID(id):
 
 func _on_resized() -> void:
 	regenerateGeneratorPositions()
+
+func speak():
+	speaking = true
+	for letter in Text:
+		if !speaking:
+			return
+		Speaker.stream = letter.Character.Sound
+		Speaker.play()
+		await Speaker.finished
+	speaking = false
+
+func _on_play_button_pressed() -> void:
+	if !speaking:
+		speak()
+
+
+func _on_stop_button_pressed() -> void:
+	speaking = false
+
+func updateButtonTextures():
+	PlayButton.icon = DisabledPlay if speaking else (PressedPlay if PlayButton.button_pressed else NormalPlay)
+	StopButton.icon = (PressedStop if StopButton.button_pressed else NormalStop) if speaking else DisabledStop
+
+
+func _on_play_button_button_down() -> void:
+	updateButtonTextures()
+
+
+func _on_stop_button_button_down() -> void:
+	updateButtonTextures()
+
+
+func _on_stop_button_button_up() -> void:
+	updateButtonTextures()
+
+
+func _on_play_button_button_up() -> void:
+	updateButtonTextures()

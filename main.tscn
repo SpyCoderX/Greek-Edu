@@ -1,11 +1,50 @@
-[gd_scene load_steps=48 format=3 uid="uid://c8dm0p5hnwoc3"]
+[gd_scene load_steps=89 format=3 uid="uid://c8dm0p5hnwoc3"]
 
 [ext_resource type="Theme" uid="uid://dq3nkyvt0p0ak" path="res://Assets/main_theme.tres" id="1_4g8ax"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="2_j7whi"]
 [ext_resource type="Script" path="res://Scripts/Letter.gd" id="3_l6agy"]
 [ext_resource type="Script" path="res://Scripts/Diphthong.gd" id="4_ly1yb"]
+[ext_resource type="AudioStream" uid="uid://d2ageg3c57x5j" path="res://Assets/Greek Audio/α.mp3" id="4_vtbh5"]
 [ext_resource type="PackedScene" uid="uid://cg8pqtjxwyrvb" path="res://tile.tscn" id="4_yimjp"]
+[ext_resource type="AudioStream" uid="uid://bn38pir6uxoc7" path="res://Assets/Greek Audio/β.mp3" id="5_2fsh6"]
 [ext_resource type="Script" path="res://Scripts/NonAlphanumeric.gd" id="5_ify1m"]
+[ext_resource type="AudioStream" uid="uid://dehu2ee5goyi1" path="res://Assets/Greek Audio/γ.mp3" id="6_0fyq6"]
+[ext_resource type="AudioStream" uid="uid://c35q7x5irp706" path="res://Assets/Greek Audio/δ.mp3" id="7_o8r3v"]
+[ext_resource type="AudioStream" uid="uid://b33q1gtvwoxqj" path="res://Assets/Greek Audio/ε.mp3" id="8_68isc"]
+[ext_resource type="AudioStream" uid="uid://dqbl002p42spl" path="res://Assets/Greek Audio/ζ.mp3" id="9_vx618"]
+[ext_resource type="AudioStream" uid="uid://bffx4da20nc4w" path="res://Assets/Greek Audio/η.mp3" id="10_f8ftc"]
+[ext_resource type="AudioStream" uid="uid://cggwtqje3jhwe" path="res://Assets/Greek Audio/θ.mp3" id="11_s8w8w"]
+[ext_resource type="AudioStream" uid="uid://ca2whvl4cwcjk" path="res://Assets/Greek Audio/ι.mp3" id="12_tw2nn"]
+[ext_resource type="AudioStream" uid="uid://cv6pwffo7wxas" path="res://Assets/Greek Audio/κ.mp3" id="13_i50he"]
+[ext_resource type="AudioStream" uid="uid://dd7ft66n4kou8" path="res://Assets/Greek Audio/λ.mp3" id="14_rxd6x"]
+[ext_resource type="AudioStream" uid="uid://ckiec1py8deet" path="res://Assets/Greek Audio/μ.mp3" id="15_noj32"]
+[ext_resource type="AudioStream" uid="uid://ca7wo1drmp3ur" path="res://Assets/Greek Audio/ν.mp3" id="16_gs4j4"]
+[ext_resource type="AudioStream" uid="uid://crvqafwo20wgq" path="res://Assets/Greek Audio/ξ.mp3" id="17_52kkk"]
+[ext_resource type="AudioStream" uid="uid://bt18jtibu1n11" path="res://Assets/Greek Audio/ο.mp3" id="18_o321p"]
+[ext_resource type="AudioStream" uid="uid://c1823kl6typqj" path="res://Assets/Greek Audio/π.mp3" id="19_mvcnk"]
+[ext_resource type="AudioStream" uid="uid://dijdggt6yybt7" path="res://Assets/Greek Audio/ρ.mp3" id="20_1qxvc"]
+[ext_resource type="AudioStream" uid="uid://dtp745o60nagp" path="res://Assets/Greek Audio/σ.mp3" id="21_bf2bf"]
+[ext_resource type="AudioStream" uid="uid://cgp7we1vqekap" path="res://Assets/Greek Audio/τ.mp3" id="22_70nuo"]
+[ext_resource type="AudioStream" uid="uid://bh7vbrvocih3a" path="res://Assets/Greek Audio/υ.mp3" id="23_r2775"]
+[ext_resource type="AudioStream" uid="uid://dak67ls6qmhe2" path="res://Assets/Greek Audio/φ.mp3" id="24_e6ysi"]
+[ext_resource type="AudioStream" uid="uid://rtifjomrotrp" path="res://Assets/Greek Audio/χ.mp3" id="25_cfrot"]
+[ext_resource type="AudioStream" uid="uid://tblsbm6gqujr" path="res://Assets/Greek Audio/ψ.mp3" id="26_qg1gn"]
+[ext_resource type="AudioStream" uid="uid://b4siqrfis2osy" path="res://Assets/Greek Audio/ω.mp3" id="27_13dkr"]
+[ext_resource type="AudioStream" uid="uid://dhnqraakhw5v2" path="res://Assets/Greek Audio/αι.mp3" id="29_1liqr"]
+[ext_resource type="AudioStream" uid="uid://bljixbs4lnp7d" path="res://Assets/Greek Audio/αυ.mp3" id="31_qr51o"]
+[ext_resource type="AudioStream" uid="uid://dyfdm4akadi58" path="res://Assets/Greek Audio/ει οι υι.mp3" id="32_oun2w"]
+[ext_resource type="AudioStream" uid="uid://dv5q6774x44rq" path="res://Assets/Greek Audio/ευ.mp3" id="33_alsyx"]
+[ext_resource type="AudioStream" uid="uid://dwtdtmjmio7st" path="res://Assets/Greek Audio/ηυ.mp3" id="34_ojn4q"]
+[ext_resource type="AudioStream" uid="uid://dq2hoandjgb7x" path="res://Assets/Greek Audio/ου.mp3" id="35_o0qgg"]
+[ext_resource type="AudioStream" uid="uid://cnt54gtgootv6" path="res://Assets/Greek Audio/μπ.mp3" id="36_cahus"]
+[ext_resource type="AudioStream" uid="uid://75vbop0gmtsq" path="res://Assets/Greek Audio/ντ.mp3" id="37_l0wv6"]
+[ext_resource type="AudioStream" uid="uid://b6bjiri5updsk" path="res://Assets/Greek Audio/γγ γκ.mp3" id="38_q5ijl"]
+[ext_resource type="Texture2D" uid="uid://dw611f5tg7sq5" path="res://Assets/Play.svg" id="40_rit30"]
+[ext_resource type="Texture2D" uid="uid://cfkrx0qrq7wxr" path="res://Assets/Play disabled.svg" id="41_hfof6"]
+[ext_resource type="Texture2D" uid="uid://dlv068l1yaat2" path="res://Assets/Stop pressed.svg" id="41_jee02"]
+[ext_resource type="Texture2D" uid="uid://bv8ihb5iljtl0" path="res://Assets/Stop disabled.svg" id="41_mdhhx"]
+[ext_resource type="Texture2D" uid="uid://daatksbpcyclw" path="res://Assets/Stop.svg" id="41_yodli"]
+[ext_resource type="Texture2D" uid="uid://d31tv7xtoq2ow" path="res://Assets/Play pressed.svg" id="42_igx7e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fnnxu"]
 bg_color = Color(0.205117, 0.205117, 0.205117, 1)
@@ -15,138 +54,168 @@ script = ExtResource("3_l6agy")
 Lower = "α"
 Upper = "Α"
 Vowel = true
+Sound = ExtResource("4_vtbh5")
 
 [sub_resource type="Resource" id="Resource_myoff"]
 script = ExtResource("3_l6agy")
 Lower = "β"
 Upper = "Β"
 Vowel = false
+Sound = ExtResource("5_2fsh6")
 
 [sub_resource type="Resource" id="Resource_oh5f4"]
 script = ExtResource("3_l6agy")
 Lower = "γ"
 Upper = "Γ"
 Vowel = false
+Sound = ExtResource("6_0fyq6")
 
 [sub_resource type="Resource" id="Resource_ptt7x"]
 script = ExtResource("3_l6agy")
 Lower = "δ"
 Upper = "Δ"
 Vowel = false
+Sound = ExtResource("7_o8r3v")
 
 [sub_resource type="Resource" id="Resource_ttqu5"]
 script = ExtResource("3_l6agy")
 Lower = "ε"
 Upper = "Ε"
 Vowel = true
+Sound = ExtResource("8_68isc")
 
 [sub_resource type="Resource" id="Resource_ibkec"]
 script = ExtResource("3_l6agy")
 Lower = "ζ"
 Upper = "Ζ"
 Vowel = false
+Sound = ExtResource("9_vx618")
 
 [sub_resource type="Resource" id="Resource_4hemv"]
 script = ExtResource("3_l6agy")
 Lower = "η"
 Upper = "Η"
 Vowel = true
+Sound = ExtResource("10_f8ftc")
 
 [sub_resource type="Resource" id="Resource_754ki"]
 script = ExtResource("3_l6agy")
 Lower = "θ"
 Upper = "Θ"
 Vowel = false
+Sound = ExtResource("11_s8w8w")
 
 [sub_resource type="Resource" id="Resource_8anjv"]
 script = ExtResource("3_l6agy")
 Lower = "ι"
 Upper = "Ι"
 Vowel = true
+Sound = ExtResource("12_tw2nn")
 
 [sub_resource type="Resource" id="Resource_fhcsk"]
 script = ExtResource("3_l6agy")
 Lower = "κ"
 Upper = "Κ"
 Vowel = false
+Sound = ExtResource("13_i50he")
 
 [sub_resource type="Resource" id="Resource_5cfk6"]
 script = ExtResource("3_l6agy")
 Lower = "λ"
 Upper = "Λ"
 Vowel = false
+Sound = ExtResource("14_rxd6x")
 
 [sub_resource type="Resource" id="Resource_ffmf6"]
 script = ExtResource("3_l6agy")
 Lower = "μ"
 Upper = "Μ"
 Vowel = false
+Sound = ExtResource("15_noj32")
 
 [sub_resource type="Resource" id="Resource_wm672"]
 script = ExtResource("3_l6agy")
 Lower = "ν"
 Upper = "Ν"
 Vowel = false
+Sound = ExtResource("16_gs4j4")
+
+[sub_resource type="Resource" id="Resource_wgeep"]
+script = ExtResource("3_l6agy")
+Lower = "ξ"
+Upper = "Ξ"
+Vowel = false
+Sound = ExtResource("17_52kkk")
 
 [sub_resource type="Resource" id="Resource_vb27o"]
 script = ExtResource("3_l6agy")
 Lower = "ο"
 Upper = "Ο"
 Vowel = true
+Sound = ExtResource("18_o321p")
 
 [sub_resource type="Resource" id="Resource_3d2xu"]
 script = ExtResource("3_l6agy")
 Lower = "π"
 Upper = "Π"
 Vowel = false
+Sound = ExtResource("19_mvcnk")
 
 [sub_resource type="Resource" id="Resource_5gn0u"]
 script = ExtResource("3_l6agy")
 Lower = "ρ"
 Upper = "Ρ"
 Vowel = false
+Sound = ExtResource("20_1qxvc")
 
 [sub_resource type="Resource" id="Resource_x8466"]
 script = ExtResource("3_l6agy")
 Lower = "σ"
 Upper = "Σ"
 Vowel = false
+Sound = ExtResource("21_bf2bf")
 
 [sub_resource type="Resource" id="Resource_5aq57"]
 script = ExtResource("3_l6agy")
 Lower = "τ"
 Upper = "Τ"
 Vowel = false
+Sound = ExtResource("22_70nuo")
 
 [sub_resource type="Resource" id="Resource_m1n36"]
 script = ExtResource("3_l6agy")
 Lower = "υ"
 Upper = "Υ"
 Vowel = true
+Sound = ExtResource("23_r2775")
 
 [sub_resource type="Resource" id="Resource_v1vfm"]
 script = ExtResource("3_l6agy")
 Lower = "φ"
 Upper = "Φ"
 Vowel = false
+Sound = ExtResource("24_e6ysi")
 
 [sub_resource type="Resource" id="Resource_m0ugq"]
 script = ExtResource("3_l6agy")
 Lower = "χ"
 Upper = "Χ"
 Vowel = false
+Sound = ExtResource("25_cfrot")
 
 [sub_resource type="Resource" id="Resource_mcj1f"]
 script = ExtResource("3_l6agy")
 Lower = "ψ"
 Upper = "Ψ"
 Vowel = false
+Sound = ExtResource("26_qg1gn")
 
 [sub_resource type="Resource" id="Resource_4bgu2"]
 script = ExtResource("3_l6agy")
 Lower = "ω"
 Upper = "Ω"
 Vowel = true
+Sound = ExtResource("27_13dkr")
 
 [sub_resource type="Resource" id="Resource_bd0cg"]
 script = ExtResource("5_ify1m")
@@ -177,72 +246,86 @@ script = ExtResource("4_ly1yb")
 Lower = "αι"
 Upper = "Αι"
 Vowel = false
+Sound = ExtResource("29_1liqr")
 
 [sub_resource type="Resource" id="Resource_u4yd1"]
 script = ExtResource("4_ly1yb")
 Lower = "αυ"
 Upper = "Αυ"
 Vowel = false
+Sound = ExtResource("31_qr51o")
 
 [sub_resource type="Resource" id="Resource_ylxur"]
 script = ExtResource("4_ly1yb")
 Lower = "ει"
 Upper = "Ει"
 Vowel = false
+Sound = ExtResource("32_oun2w")
 
 [sub_resource type="Resource" id="Resource_5wr2k"]
 script = ExtResource("4_ly1yb")
 Lower = "οι"
 Upper = "Οι"
 Vowel = false
+Sound = ExtResource("32_oun2w")
 
 [sub_resource type="Resource" id="Resource_d73n3"]
 script = ExtResource("4_ly1yb")
 Lower = "υι"
 Upper = "Υι"
 Vowel = false
+Sound = ExtResource("32_oun2w")
 
 [sub_resource type="Resource" id="Resource_gp3a2"]
 script = ExtResource("4_ly1yb")
 Lower = "ευ"
 Upper = "Ευ"
 Vowel = false
+Sound = ExtResource("33_alsyx")
 
 [sub_resource type="Resource" id="Resource_4jnuy"]
 script = ExtResource("4_ly1yb")
 Lower = "ηυ"
 Upper = "Ηυ"
 Vowel = false
+Sound = ExtResource("34_ojn4q")
 
 [sub_resource type="Resource" id="Resource_f8p1x"]
 script = ExtResource("4_ly1yb")
 Lower = "ου"
 Upper = "Ου"
 Vowel = false
+Sound = ExtResource("35_o0qgg")
 
 [sub_resource type="Resource" id="Resource_24d6y"]
 script = ExtResource("4_ly1yb")
 Lower = "μπ"
 Upper = "Μπ"
 Vowel = false
+Sound = ExtResource("36_cahus")
 
 [sub_resource type="Resource" id="Resource_b67vd"]
 script = ExtResource("4_ly1yb")
 Lower = "ντ"
 Upper = "Ντ"
 Vowel = false
+Sound = ExtResource("37_l0wv6")
 
 [sub_resource type="Resource" id="Resource_xr602"]
 script = ExtResource("4_ly1yb")
 Lower = "γγ"
 Upper = "Γγ"
 Vowel = false
+Sound = ExtResource("38_q5ijl")
 
 [sub_resource type="Resource" id="Resource_budvm"]
 script = ExtResource("4_ly1yb")
 Lower = "γκ"
 Upper = "Γκ"
 Vowel = false
+Sound = ExtResource("38_q5ijl")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ypip8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mdyg2"]
 bg_color = Color(0.0646965, 0.0646965, 0.0646965, 1)
@@ -251,7 +334,7 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[node name="Main" type="PanelContainer" node_paths=PackedStringArray("LowerGrid", "UpperLines")]
+[node name="Main" type="PanelContainer" node_paths=PackedStringArray("LowerGrid", "UpperLines", "PlayButton", "StopButton", "Speaker")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -261,14 +344,42 @@ mouse_filter = 2
 theme = ExtResource("1_4g8ax")
 theme_override_styles/panel = SubResource("StyleBoxFlat_fnnxu")
 script = ExtResource("2_j7whi")
-Characters = Array[ExtResource("3_l6agy")]([SubResource("Resource_k11e0"), SubResource("Resource_myoff"), SubResource("Resource_oh5f4"), SubResource("Resource_ptt7x"), SubResource("Resource_ttqu5"), SubResource("Resource_ibkec"), SubResource("Resource_4hemv"), SubResource("Resource_754ki"), SubResource("Resource_8anjv"), SubResource("Resource_fhcsk"), SubResource("Resource_5cfk6"), SubResource("Resource_ffmf6"), SubResource("Resource_wm672"), SubResource("Resource_vb27o"), SubResource("Resource_3d2xu"), SubResource("Resource_5gn0u"), SubResource("Resource_x8466"), SubResource("Resource_5aq57"), SubResource("Resource_m1n36"), SubResource("Resource_v1vfm"), SubResource("Resource_m0ugq"), SubResource("Resource_mcj1f"), SubResource("Resource_4bgu2"), SubResource("Resource_bd0cg"), SubResource("Resource_ad2ln"), SubResource("Resource_pwlx7"), SubResource("Resource_gqs4n"), SubResource("Resource_vt0p3"), SubResource("Resource_u4yd1"), SubResource("Resource_ylxur"), SubResource("Resource_5wr2k"), SubResource("Resource_d73n3"), SubResource("Resource_gp3a2"), SubResource("Resource_4jnuy"), SubResource("Resource_f8p1x"), SubResource("Resource_24d6y"), SubResource("Resource_b67vd"), SubResource("Resource_xr602"), SubResource("Resource_budvm")])
+Characters = Array[ExtResource("3_l6agy")]([SubResource("Resource_k11e0"), SubResource("Resource_myoff"), SubResource("Resource_oh5f4"), SubResource("Resource_ptt7x"), SubResource("Resource_ttqu5"), SubResource("Resource_ibkec"), SubResource("Resource_4hemv"), SubResource("Resource_754ki"), SubResource("Resource_8anjv"), SubResource("Resource_fhcsk"), SubResource("Resource_5cfk6"), SubResource("Resource_ffmf6"), SubResource("Resource_wm672"), SubResource("Resource_wgeep"), SubResource("Resource_vb27o"), SubResource("Resource_3d2xu"), SubResource("Resource_5gn0u"), SubResource("Resource_x8466"), SubResource("Resource_5aq57"), SubResource("Resource_m1n36"), SubResource("Resource_v1vfm"), SubResource("Resource_m0ugq"), SubResource("Resource_mcj1f"), SubResource("Resource_4bgu2"), SubResource("Resource_bd0cg"), SubResource("Resource_ad2ln"), SubResource("Resource_pwlx7"), SubResource("Resource_gqs4n"), SubResource("Resource_vt0p3"), SubResource("Resource_u4yd1"), SubResource("Resource_ylxur"), SubResource("Resource_5wr2k"), SubResource("Resource_d73n3"), SubResource("Resource_gp3a2"), SubResource("Resource_4jnuy"), SubResource("Resource_f8p1x"), SubResource("Resource_24d6y"), SubResource("Resource_b67vd"), SubResource("Resource_xr602"), SubResource("Resource_budvm")])
 LowerGrid = NodePath("Container/LG Panel (Container)/LG Margin/Lower Grid")
 UpperLines = NodePath("Container/UL Margin/Upper Lines")
 TileRef = ExtResource("4_yimjp")
+PlayButton = NodePath("Container/Buttons/Play Button")
+StopButton = NodePath("Container/Buttons/Stop Button")
+Speaker = NodePath("Speaker")
+NormalPlay = ExtResource("40_rit30")
+DisabledPlay = ExtResource("41_hfof6")
+PressedPlay = ExtResource("42_igx7e")
+NormalStop = ExtResource("41_yodli")
+DisabledStop = ExtResource("41_mdhhx")
+PressedStop = ExtResource("41_jee02")
 
 [node name="Container" type="VBoxContainer" parent="."]
 layout_mode = 2
 mouse_filter = 2
+
+[node name="Buttons" type="HBoxContainer" parent="Container"]
+layout_mode = 2
+
+[node name="Play Button" type="Button" parent="Container/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ypip8")
+icon = ExtResource("40_rit30")
+flat = true
+
+[node name="Stop Button" type="Button" parent="Container/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ypip8")
+icon = ExtResource("41_mdhhx")
+flat = true
 
 [node name="UL Margin" type="MarginContainer" parent="Container"]
 layout_mode = 2
@@ -301,4 +412,12 @@ text = "© SpyCoderX 2025"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Speaker" type="AudioStreamPlayer" parent="."]
+
 [connection signal="resized" from="." to="." method="_on_resized"]
+[connection signal="button_down" from="Container/Buttons/Play Button" to="." method="_on_play_button_button_down"]
+[connection signal="button_up" from="Container/Buttons/Play Button" to="." method="_on_play_button_button_up"]
+[connection signal="pressed" from="Container/Buttons/Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="button_down" from="Container/Buttons/Stop Button" to="." method="_on_stop_button_button_down"]
+[connection signal="button_up" from="Container/Buttons/Stop Button" to="." method="_on_stop_button_button_up"]
+[connection signal="pressed" from="Container/Buttons/Stop Button" to="." method="_on_stop_button_pressed"]
