@@ -137,9 +137,12 @@ func speak():
 	for letter in Text:
 		if !speaking:
 			return
-		Speaker.stream = letter.Character.Sound
-		Speaker.play()
-		await Speaker.finished
+		if letter.Character.Sound:
+			Speaker.stream = letter.Character.Sound
+			Speaker.play()
+			await Speaker.finished
+		else:
+			await get_tree().create_timer(0.6).timeout
 	speaking = false
 
 func _on_play_button_pressed() -> void:
