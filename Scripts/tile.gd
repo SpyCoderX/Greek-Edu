@@ -13,7 +13,7 @@ var Character : Letter:
 		Character = new_letter
 		if text!=null:
 			updateText()
-
+var last_position : Vector2
 var target_position : Vector2
 var target_scale : Vector2
 var deleted : bool = false
@@ -53,7 +53,7 @@ func _input(event: InputEvent) -> void:
 				target_position = get_global_mouse_position()-contactPoint-(global_position-position)+Offset
 			updateVisuals()
 			isPressed = false
-			if target_position.y + (global_position.y-position.y)<lowerArea.global_position.y:
+			if target_position.y + (global_position.y-position.y)<lowerArea.global_position.y and global_position.distance_to(Offset+last_position)>15:
 				movedToTextArea.emit()
 			else:
 				movedToDeleteArea.emit()
@@ -92,6 +92,7 @@ func delete():
 func activatePressedEvent():
 	isPressed = true
 	contactPoint = get_global_mouse_position()-global_position
+	last_position = global_position
 	updateVisuals()
 	if target_position.y + (global_position.y-position.y)>lowerArea.global_position.y:
 		pickedUpFromSpawn.emit()

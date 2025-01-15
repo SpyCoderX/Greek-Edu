@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cg8pqtjxwyrvb"]
+[gd_scene load_steps=5 format=3 uid="uid://k6f6low8nkju"]
 
 [ext_resource type="Texture2D" uid="uid://d35u1qquu8spt" path="res://Assets/Letter Card.svg" id="1_q472g"]
 [ext_resource type="Script" path="res://Scripts/tile.gd" id="1_qwdbh"]

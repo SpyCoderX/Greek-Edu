@@ -1,11 +1,11 @@
-[gd_scene load_steps=89 format=3 uid="uid://c8dm0p5hnwoc3"]
+[gd_scene load_steps=89 format=3 uid="uid://bh2ljxalr8v6r"]
 
 [ext_resource type="Theme" uid="uid://dq3nkyvt0p0ak" path="res://Assets/main_theme.tres" id="1_4g8ax"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="2_j7whi"]
 [ext_resource type="Script" path="res://Scripts/Letter.gd" id="3_l6agy"]
 [ext_resource type="Script" path="res://Scripts/Diphthong.gd" id="4_ly1yb"]
 [ext_resource type="AudioStream" uid="uid://d2ageg3c57x5j" path="res://Assets/Greek Audio/α.mp3" id="4_vtbh5"]
-[ext_resource type="PackedScene" uid="uid://cg8pqtjxwyrvb" path="res://tile.tscn" id="4_yimjp"]
+[ext_resource type="PackedScene" uid="uid://k6f6low8nkju" path="res://tile.tscn" id="4_yimjp"]
 [ext_resource type="AudioStream" uid="uid://bn38pir6uxoc7" path="res://Assets/Greek Audio/β.mp3" id="5_2fsh6"]
 [ext_resource type="Script" path="res://Scripts/NonAlphanumeric.gd" id="5_ify1m"]
 [ext_resource type="AudioStream" uid="uid://dehu2ee5goyi1" path="res://Assets/Greek Audio/γ.mp3" id="6_0fyq6"]
